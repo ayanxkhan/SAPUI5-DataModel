@@ -1,0 +1,98 @@
+{
+  "_version": "1.73.1",
+  "sap.app": {
+    "id": "datamodeldatabinding",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.5",
+      "toolsId": "ec391cf9-f1a2-410d-9d8a-d0c6dd1dda9f"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.136.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "datamodeldatabinding.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "datamodeldatabinding.view",
+        "async": true,
+        "viewPath": "datamodeldatabinding.view"
+      },
+      "routes": [
+        {
+          "name": "RouteInitialView",
+          "pattern": ":?query:",
+          "target": [
+            "TargetInitialView"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetInitialView": {
+          "id": "InitialView",
+          "name": "InitialView"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "datamodeldatabinding.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

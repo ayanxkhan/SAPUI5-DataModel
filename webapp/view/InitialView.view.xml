@@ -1,0 +1,21 @@
+<mvc:View controllerName="datamodeldatabinding.controller.InitialView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+    <!-- JSONModel -->
+    <!-- <VBox>
+    <Text text = "{/employees/name}" />
+    <Text text = "{/employees/role}" />
+    </VBox> -->
+
+    <!-- ResourceModel -->
+    <VBox>
+    <Text text = "{i18n>title}" />
+    <Text text = "{i18n>greet}" />
+    </VBox>
+
+
+
+    </Page>
+</mvc:View>
